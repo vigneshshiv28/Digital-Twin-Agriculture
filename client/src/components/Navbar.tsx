@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 
@@ -17,17 +18,21 @@ function Navbar() {
           </button>
         </div>
         <nav className="hidden md:flex items-center gap-4">
-          <Link href="#" className="hover:bg-black hover:text-white px-3 py-2 rounded" prefetch={false}>
+        <Link href="#" className="relative hover:text-lime-300 px-3 py-2 rounded group" prefetch={false}>
             Home
+            <span className="absolute left-0 bottom-0 w-full h-[3px] bg-lime-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link href="/Dashboard" className="hover:bg-black hover:text-white px-3 py-2 rounded" prefetch={false}>
-            DashBoard
+          <Link href="/Dashboard" className="relative hover:text-lime-300 px-3 py-2 rounded group" prefetch={false}>
+            Dashboard
+            <span className="absolute left-0 bottom-0 w-full h-[3px] bg-lime-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link href="#" className="hover:bg-black hover:text-white px-3 py-2 rounded" prefetch={false}>
+          <Link href="#" className="relative hover:text-lime-300 px-3 py-2 rounded group" prefetch={false}>
             Sensors
+            <span className="absolute left-0 bottom-0 w-full h-[3px] bg-lime-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
-          <Link href="#" className="hover:bg-black hover:text-white px-3 py-2 rounded" prefetch={false}>
+          <Link href="#" className="relative hover:text-lime-300 px-3 py-2 rounded group" prefetch={false}>
             User
+            <span className="absolute left-0 bottom-0 w-full h-[3px] bg-lime-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
         </nav>
       </div>

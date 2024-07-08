@@ -1,22 +1,27 @@
+"use client";
 import React from 'react';
 import PlantCard from './components/PlantCard';
-
-const data = [
-  // Sample data for the graphs
-  { name: 'Jan', value: 400 },
-  { name: 'Feb', value: 300 },
-  { name: 'Mar', value: 200 },
-  { name: 'Apr', value: 278 },
-  { name: 'May', value: 189 },
-];
+import LinechartChart from './components/LineChart';
+import AlertCard from './components/AlertCard';
+import RecommendationCard from './components/RecommendationCard';
 
 const Dashboard = () => {
   return (
-    <>
-        <div>
-            <PlantCard/>
-        </div>
-    </>
+    <div className="p-6">
+      <div>
+        <h3 className=' text-lime-300 text-4xl'> Your Plant</h3>
+      </div>
+      <div className="mb-6">
+        <PlantCard />
+      </div>
+      <div className="mb-6">
+        <LinechartChart />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <RecommendationCard className="flex-grow" />
+        <AlertCard className="flex-grow" />
+      </div>
+    </div>
   );
 };
 
